@@ -1,0 +1,99 @@
+.wrapper-tickets{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+.tickets{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+button{
+  margin-top: 10px;
+}
+.btn{
+  background-size: cover;
+  border: none;
+  background-color: white;
+  margin-top: 5px;
+  margin-left: 5px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+
+.btn.addTicket{
+  margin-left: 600px;
+  width: 100px;
+  height: 35px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.btn.editTicket{
+  background-image: url("/src/img/edit.jpeg");
+  
+}
+.btn.deleteTicket{
+  background-image: url("/src/img/delete.jpeg");
+}
+
+.btn:hover{
+  transform: scale(1.05);
+}
+.description {
+  margin-top: 10px;
+}
+.bodyTicket{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 450px;
+  min-height: 30px;
+  margin: 0 8px;
+}
+.date{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+}
+
+.ticket{
+  border-radius: 10px;
+  display: flex;
+  border: 1px solid black;
+  margin-top: 20px;
+  width: 700px;
+  min-height: 40px;
+  height: fit-content;
+}
+fieldset{
+  display: flex;
+  flex-direction: column;
+  min-width: 400px;
+}
+
+.form-field{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 10px auto;
+}
+.modal{
+  /* background-color: black; */
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+form{
+  width: fit-content;
+  margin: 60px auto;
+  background-color: rgb(254, 254, 254);
+}
