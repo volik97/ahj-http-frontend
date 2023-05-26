@@ -1,6 +1,6 @@
 import Api from './api/api'
 import PopupCntrl from './popup/controller/controllerPopup'
-import TicketCtnrl from './app/ticketscntrl'
+import TicketCtnrl from './tickets/ticketscntrl'
 
 export default class App {
   constructor () {
