@@ -1,0 +1,1 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/sw1ne1t1ii6bb56b?svg=true)](https://ci.appveyor.com/project/volik97/ahj-http-frontend)
