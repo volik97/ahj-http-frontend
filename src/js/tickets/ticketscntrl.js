@@ -9,9 +9,9 @@ export default class TicketCtnrl {
     this.idTicket = null
   }
 
-  createTicket (id, name, created) {
+  createTicket (id, name, created, status) {
     return `<div class="ticket" id="${id}">
-    <input type="checkbox">
+    <input type="checkbox" class="checkbox" ${status ? 'checked' : ''}>
     <div class="bodyTicket">  
       <a class="title">${name}</a>
     </div>

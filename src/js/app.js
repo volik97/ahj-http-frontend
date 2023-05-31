@@ -13,7 +13,7 @@ export default class App {
     const tickets = await this.api.sendRequest('allTickets')
     const ticketsWrapper = document.getElementsByClassName('tickets')
     tickets.forEach(element => {
-      ticketsWrapper[0].insertAdjacentHTML('afterbegin', this.ticketController.createTicket(element.id, element.name, element.created))
+      ticketsWrapper[0].insertAdjacentHTML('afterbegin', this.ticketController.createTicket(element.id, element.name, element.created, element.status))
     })
   }
 
@@ -31,6 +31,11 @@ export default class App {
         this.ticketController.showDescription(data.description, target)
       })
     }
+  }
+
+  async changeStatus(id){
+    const result = await this.api.sendRequest('changeStatus', id)
+    console.log(result)
   }
 
   async submitFunction (e) {
@@ -92,6 +97,9 @@ export default class App {
     this.ticketController.events()
     document.addEventListener('click', (e) => this.descriptionViewer(e))
     document.addEventListener('submit', async (e) => this.submitFunction(e))
+    document.addEventListener('change', (e) => {
+      this.changeStatus(e.target.parentElement.id)
+    })
   }
 }
 
